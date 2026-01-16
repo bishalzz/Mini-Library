@@ -1,51 +1,10 @@
 import BookCard from "../Components/BookCard";
-import atomic from "../assets/atomic-habits-f.webp";
-import { useState } from "react";
+import { useBookContext } from "../context/BookContext";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const [books, setBooks] = useState([
-    {
-      id: 1,
-      title: "Atomic Habits",
-      author: "James Clear",
-      image: atomic,
-    },
-    {
-      id: 2,
-      title: "Rich Dad Poor Dad",
-      author: "Robert Kiyosaki",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6QhmMHON685721JqAt9aWHCisb8nC9v4z1A&s",
-    },
-    {
-      id: 3,
-      title: "The Alchemist",
-      author: "Paulo Coelho",
-      image:
-        "https://media.thuprai.com/front_covers/the-alchemist-pr4uo0w3.jpg",
-    },
-    {
-      id: 4,
-      title: "The Art and Making of Arcane",
-      author: " Elisabeth Vincentelli",
-      image:
-        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1732998517i/216736098.jpg",
-    },
-    {
-      id: 5,
-      title: "The Harry Potter",
-      author: " J.K.Rowling",
-      image:
-        "https://biblionepal.com/cdn/shop/files/81m1s4wIPML.jpg?v=1684484749",
-    },
-  ]);
+  const { books, deleteBook } = useBookContext();
 
-  function deleteBook(id) {
-    const updatedBooks = books.filter((book) => book.id !== id);
-    setBooks(updatedBooks);
-  }
-  
   return (
     <div className="p-3 sm:p-4 md:p-6 lg:p-8">
       {/* Header with Add Button */}
@@ -73,6 +32,7 @@ function Home() {
         {books.map((book) => (
           <BookCard
             key={book.id}
+            id={book.id}
             title={book.title}
             author={book.author}
             image={book.image}
