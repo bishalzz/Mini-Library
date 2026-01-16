@@ -1,17 +1,4 @@
-// function BookCard({ title, author, image }) {
-//   return (
-//     <div className="border p-4 rounded shadow hover:shadow-lg transition w-64 cursor-pointer " >
-//       <img
-//         src={image}
-//         alt={title}
-//         className=" h-48 object-cover rounded mb-3"
-//       />
 
-//       <h2 className="text-lg font-bold">{title}</h2>
-//       <p className="text-gray-600">{author}</p>
-//     </div>
-//   );
-// }
 function BookCard({ title, author, image, onDelete }) {
   return (
     <div className="group border border-gray-200 p-2.5 sm:p-3 md:p-4 rounded-lg md:rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-full cursor-pointer flex flex-col bg-white hover:bg-gray-50">
