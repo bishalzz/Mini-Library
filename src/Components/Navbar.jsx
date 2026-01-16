@@ -1,31 +1,4 @@
-// import { Link } from "react-router-dom";
 
-// function Navbar() {
-//   return (
-//     <nav className="bg-slate-900 text-white px-6 py-4 flex justify-between items-center">
-//       {/* Logo / App Name */}
-//       <div className="text-2xl font-bold">📚 Mini Library</div>
-
-//       {/* Navigation Links */}
-//       <div className="space-x-6">
-//         <Link to="/" className="hover:text-yellow-400 transition-colors">
-//           Home
-//         </Link>
-//         <Link
-//           to="/about"
-//           className="hover:text-yellow-400 transition-colors"
-//         >
-//           About
-//         </Link>
-//         <Link to="/contact" className="hover:text-yellow-400 transition-colors">
-//           Contact
-//         </Link>
-//       </div>
-//     </nav>
-//   );
-// }
-
-// export default Navbar;
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
